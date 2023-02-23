@@ -8,8 +8,8 @@ pipeline {
         REGISTRY_CREDS = 'docker-registry'
     }
 
-    stages ('Cleanup WorkSpace') {
-        stage {
+    stages {
+        stage ('Cleanup WorkSpace') {
             script {
                 cleanWs()
             }
