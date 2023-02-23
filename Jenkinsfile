@@ -5,7 +5,7 @@ pipeline {
         APP_NAME = "web-python"
         IMAGE_TAG = "${BUILD_NUMBER}"
         IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "/" + "${IMAGE_TAG}"
-        REGISTRY_CREDS = 'docker-registry'
+        REGISTRY_CREDS = 'docker-registrty'
     }
 
     stages {
