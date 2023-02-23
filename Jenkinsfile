@@ -9,9 +9,11 @@ pipeline {
     }
 
     stages {
-        stage ('Cleanup WorkSpace') {
-            script {
-                cleanWs()
+        stage ('Cleanup Workspace') {
+            steps {
+                script {
+                    cleanWS()
+                }
             }
         }
     }
