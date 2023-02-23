@@ -12,9 +12,19 @@ pipeline {
         stage ('Cleanup Workspace') {
             steps {
                 script {
-                   cleanWs()
+                    cleanWs()
                 }
             }
+        }
+        stage ('Git Checkout') {
+            steps {
+                script {
+                    git credentialsId: 'GIT-PAT',
+                    url: 'https://github.com/shalin-1000/python-app',
+                    branch: 'main'
+                }
+            }
+
         }
     }
 }
